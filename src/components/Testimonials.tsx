@@ -23,13 +23,20 @@ const testimonials = [
 
 export const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-20 bg-gradient-to-b from-gray-50 to-white">
-      <div className="container px-4 mx-auto">
+    <section id="testimonials" className="relative py-20 overflow-hidden">
+      {/* Градиентный фон */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-white to-secondary/10" />
+      
+      {/* Декоративные элементы */}
+      <div className="absolute top-10 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 right-10 w-64 h-64 bg-secondary/5 rounded-full blur-3xl" />
+      
+      <div className="container relative px-4 mx-auto">
         <div className="text-center mb-16 animate-fadeIn">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
             Recensioni dei nostri studenti
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Scopri cosa dicono di noi coloro che già studiano con Way2Speak
           </p>
         </div>
@@ -38,27 +45,38 @@ export const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="group p-8 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 animate-fadeIn hover:-translate-y-1 border border-gray-100"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group p-8 rounded-2xl backdrop-blur-sm bg-white/70 shadow-lg hover:shadow-xl 
+                         transition-all duration-500 animate-fadeIn hover:-translate-y-2 
+                         border border-white/20 hover:border-primary/20"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="flex items-center mb-4">
+              {/* Рейтинг */}
+              <div className="flex items-center mb-6 gap-1">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star 
                     key={i} 
-                    className="w-5 h-5 fill-primary text-primary group-hover:scale-110 transition-transform" 
+                    className="w-6 h-6 fill-primary text-primary group-hover:scale-110 transition-transform" 
+                    style={{ transitionDelay: `${i * 0.1}s` }}
                   />
                 ))}
               </div>
-              <p className="text-gray-600 mb-6 italic">&ldquo;{testimonial.content}&rdquo;</p>
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <span className="text-primary font-bold text-lg">
+              
+              {/* Контент */}
+              <p className="text-gray-700 mb-8 text-lg leading-relaxed italic">
+                &ldquo;{testimonial.content}&rdquo;
+              </p>
+              
+              {/* Информация о пользователе */}
+              <div className="flex items-center space-x-4">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/30 
+                               rounded-full flex items-center justify-center ring-4 ring-white">
+                  <span className="text-primary font-bold text-xl">
                     {testimonial.name.charAt(0)}
                   </span>
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  <p className="font-semibold text-gray-900 text-lg">{testimonial.name}</p>
+                  <p className="text-primary/80 font-medium">{testimonial.role}</p>
                 </div>
               </div>
             </div>
