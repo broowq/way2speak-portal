@@ -1,10 +1,11 @@
 import { Hero } from "@/components/Hero";
 import { Features } from "@/components/Features";
-import { Courses } from "@/components/Courses";
+import { Levels } from "@/components/Levels";
 import { Navigation } from "@/components/Navigation";
 import { Testimonials } from "@/components/Testimonials";
-import { FAQ } from "@/components/FAQ";
+import { WhyUs } from "@/components/WhyUs";
 import { Footer } from "@/components/Footer";
+import { Timer } from "@/components/Timer";
 
 const Index = () => {
   return (
@@ -12,10 +13,11 @@ const Index = () => {
       <Navigation />
       <div className="pt-16">
         <Hero />
+        <Timer />
         <Features />
-        <Courses />
+        <WhyUs />
         <Testimonials />
-        <FAQ />
+        <Levels />
         <Footer />
       </div>
     </div>

@@ -10,22 +10,22 @@ export const Navigation = () => {
           </a>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#courses" className="text-gray-600 hover:text-primary transition-colors">
-              Курсы
-            </a>
             <a href="#features" className="text-gray-600 hover:text-primary transition-colors">
-              Преимущества
+              Caratteristiche
+            </a>
+            <a href="#why-us" className="text-gray-600 hover:text-primary transition-colors">
+              Perché noi
             </a>
             <a href="#testimonials" className="text-gray-600 hover:text-primary transition-colors">
-              Отзывы
+              Recensioni
             </a>
-            <a href="#faq" className="text-gray-600 hover:text-primary transition-colors">
-              FAQ
+            <a href="#levels" className="text-gray-600 hover:text-primary transition-colors">
+              Livelli
             </a>
           </div>
 
           <Button className="bg-primary hover:bg-primary-dark">
-            Записаться на урок
+            Lezione gratuita
           </Button>
         </div>
       </div>

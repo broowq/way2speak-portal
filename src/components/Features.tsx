@@ -1,25 +1,30 @@
-import { CheckCircle, Globe, Users, Clock } from "lucide-react";
+import { BookOpen, MessageCircle, Library, Clock, Shield } from "lucide-react";
 
 const features = [
   {
-    icon: Globe,
-    title: "Занятия онлайн",
-    description: "Учитесь из любой точки мира в удобное для вас время",
+    icon: BookOpen,
+    title: "Lezioni su una piattaforma interattiva",
+    description: "dove imparerai vocabolario e grammatica, integrando immediatamente ciò che hai appreso nel linguaggio parlato.",
   },
   {
-    icon: Users,
-    title: "Опытные преподаватели",
-    description: "Носители языка и сертифицированные специалисты",
+    icon: MessageCircle,
+    title: "Pratica di conversazione illimitata con l'A-Assistant",
+    description: "Ti aiuterà a superare più rapidamente la barriera linguistica e a consolidare il materiale appreso durante le lezioni.",
   },
   {
-    icon: CheckCircle,
-    title: "Индивидуальный подход",
-    description: "Программа обучения адаптируется под ваши цели",
+    icon: Library,
+    title: "Una biblioteca di risorse",
+    description: "Con film, libri, podcast e serie TV per ogni livello, per creare un ambiente linguistico direttamente a casa tua.",
   },
   {
     icon: Clock,
-    title: "Гибкий график",
-    description: "Выбирайте удобное время для занятий",
+    title: "Supporto 24/7",
+    description: "Siamo sempre disponibili per rispondere a qualsiasi tua domanda.",
+  },
+  {
+    icon: Shield,
+    title: "Risultati garantiti",
+    description: "Il programma di studio è stato sviluppato da un insegnante certificato e ha già aiutato più di 50 studenti.",
   },
 ];
 
@@ -29,13 +34,10 @@ export const Features = () => {
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16 animate-fadeIn">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Почему выбирают Way2Speak
+            Con il programma Way2Speak troverai:
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Мы создаем идеальные условия для изучения английского языка
-          </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
