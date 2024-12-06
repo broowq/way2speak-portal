@@ -2,21 +2,21 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Maria Rossi",
-    role: "Studentessa",
-    content: "Grazie a Way2Speak sono riuscita a superare la barriera linguistica e ora parlo inglese fluentemente.",
+    name: "Marco Rossi",
+    role: "Studente A2 → B1",
+    content: "Ho fatto progressi incredibili in soli 3 mesi. Il metodo è efficace e le lezioni sono sempre interessanti.",
     rating: 5,
   },
   {
-    name: "Marco Bianchi",
-    role: "Imprenditore",
-    content: "Ottima scuola! In 6 mesi mi hanno preparato per le trattative con i partner stranieri.",
+    name: "Laura Bianchi",
+    role: "Studente A1 → A2",
+    content: "Finalmente ho superato la paura di parlare inglese. Gli insegnanti sono molto pazienti e professionali.",
     rating: 5,
   },
   {
-    name: "Elena Romano",
-    role: "HR Manager",
-    content: "Approccio individuale e insegnanti professionisti. Lo consiglio a tutti!",
+    name: "Giuseppe Verdi",
+    role: "Studente B1 → B2",
+    content: "Il programma personalizzato ha fatto la differenza. Ora posso comunicare con sicurezza in inglese al lavoro.",
     rating: 5,
   },
 ];
@@ -24,10 +24,8 @@ const testimonials = [
 export const Testimonials = () => {
   return (
     <section id="testimonials" className="relative py-20 overflow-hidden">
-      {/* Градиентный фон */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-white to-secondary/10" />
       
-      {/* Декоративные элементы */}
       <div className="absolute top-10 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-10 right-10 w-64 h-64 bg-secondary/5 rounded-full blur-3xl" />
       
@@ -50,7 +48,6 @@ export const Testimonials = () => {
                          border border-white/20 hover:border-primary/20"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              {/* Рейтинг */}
               <div className="flex items-center mb-6 gap-1">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star 
@@ -61,12 +58,10 @@ export const Testimonials = () => {
                 ))}
               </div>
               
-              {/* Контент */}
               <p className="text-gray-700 mb-8 text-lg leading-relaxed italic">
                 &ldquo;{testimonial.content}&rdquo;
               </p>
               
-              {/* Информация о пользователе */}
               <div className="flex items-center space-x-4">
                 <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/30 
                                rounded-full flex items-center justify-center ring-4 ring-white">
