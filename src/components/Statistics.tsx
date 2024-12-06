@@ -4,22 +4,22 @@ const stats = [
   {
     icon: Users,
     value: "50+",
-    label: "Активных студентов",
+    label: "Studenti attivi",
   },
   {
     icon: GraduationCap,
     value: "95%",
-    label: "Успешных выпускников",
+    label: "Studenti di successo",
   },
   {
     icon: Clock,
     value: "2000+",
-    label: "Часов обучения",
+    label: "Ore di lezione",
   },
   {
     icon: Award,
     value: "4.8/5",
-    label: "Средняя оценка",
+    label: "Valutazione media",
   },
 ];
 

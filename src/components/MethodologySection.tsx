@@ -3,23 +3,23 @@ import { Brain, Rocket, Target, Users } from "lucide-react";
 const methods = [
   {
     icon: Brain,
-    title: "Инновационный подход",
-    description: "Уникальная методика, сочетающая современные технологии и проверенные методы обучения"
+    title: "Approccio innovativo",
+    description: "Una metodologia unica che combina tecnologie moderne e metodi di insegnamento comprovati"
   },
   {
     icon: Rocket,
-    title: "Быстрый прогресс",
-    description: "Заметные результаты уже после первого месяца обучения"
+    title: "Progresso rapido",
+    description: "Risultati visibili già dopo il primo mese di studio"
   },
   {
     icon: Target,
-    title: "Индивидуальный подход",
-    description: "Программа обучения адаптируется под ваши цели и темп обучения"
+    title: "Approccio individuale",
+    description: "Il programma di studio si adatta ai tuoi obiettivi e al tuo ritmo di apprendimento"
   },
   {
     icon: Users,
-    title: "Разговорная практика",
-    description: "Регулярные разговорные клубы с носителями языка"
+    title: "Pratica conversazionale",
+    description: "Club di conversazione regolari con madrelingua"
   }
 ];
 
@@ -29,10 +29,10 @@ export const MethodologySection = () => {
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Наша методология
+            La nostra metodologia
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Эффективное обучение английскому языку с использованием передовых методик
+            Apprendimento efficace dell'inglese utilizzando metodologie all'avanguardia
           </p>
         </div>
         
