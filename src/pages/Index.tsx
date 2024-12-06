@@ -6,6 +6,8 @@ import { Testimonials } from "@/components/Testimonials";
 import { WhyUs } from "@/components/WhyUs";
 import { Footer } from "@/components/Footer";
 import { Timer } from "@/components/Timer";
+import { Statistics } from "@/components/Statistics";
+import { MethodologySection } from "@/components/MethodologySection";
 
 const Index = () => {
   return (
@@ -14,9 +16,11 @@ const Index = () => {
       <div className="pt-16">
         <Hero />
         <Timer />
+        <Statistics />
         <div id="features">
           <Features />
         </div>
+        <MethodologySection />
         <div id="why-us">
           <WhyUs />
         </div>
