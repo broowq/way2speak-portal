@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { ContactForm } from "./ContactForm";
 
 export const WhyUs = () => {
   return (
@@ -14,7 +16,7 @@ export const WhyUs = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white p-8 rounded-xl shadow-sm">
+          <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300">
             <h3 className="text-xl font-bold mb-4">
               80% DELLA LEZIONE — CONVERSAZIONE
             </h3>
@@ -23,7 +25,7 @@ export const WhyUs = () => {
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-sm">
+          <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300">
             <h3 className="text-xl font-bold mb-4">
               ARGOMENTI COMPLESSI SPIEGATI CON ESEMPI SEMPLICI
             </h3>
@@ -32,7 +34,7 @@ export const WhyUs = () => {
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-sm">
+          <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300">
             <h3 className="text-xl font-bold mb-4">
               SENZA MEMORIZZAZIONE NOIOSA
             </h3>
@@ -43,9 +45,19 @@ export const WhyUs = () => {
         </div>
 
         <div className="text-center">
-          <Button size="lg" className="bg-primary hover:bg-primary-dark">
-            Trova il tuo insegnante
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button size="lg" className="bg-primary hover:bg-primary-dark">
+                Inizia il tuo percorso
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-md">
+              <DialogHeader>
+                <DialogTitle>Prenota la tua lezione di prova gratuita</DialogTitle>
+              </DialogHeader>
+              <ContactForm />
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </section>
