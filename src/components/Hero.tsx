@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ContactForm } from "./ContactForm";
-import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 export const Hero = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleScroll = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-primary/5 to-transparent">
@@ -31,7 +35,11 @@ export const Hero = () => {
                 <ContactForm />
               </DialogContent>
             </Dialog>
-            <Button size="lg" variant="outline" onClick={() => window.location.href = "#features"}>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              onClick={() => handleScroll('features')}
+            >
               Scopri di più
             </Button>
           </div>
