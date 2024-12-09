@@ -18,10 +18,10 @@ export const Hero = () => {
             <img 
               src="/lovable-uploads/f59c385d-56a2-4542-bce3-d182766cebf8.png" 
               alt="Way2Speak" 
-              className="h-24 md:h-32"
+              className="w-full max-w-2xl h-auto"
             />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 max-w-2xl mx-auto">
             Parla inglese con sicurezza e inizia a capire i madrelingua in{" "}
             <span className="text-primary">12 settimane</span>
           </h1>

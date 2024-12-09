@@ -27,7 +27,7 @@ export default {
         primary: {
           DEFAULT: "#3843D0", // Main blue
           dark: "#2832A0",
-          light: "#A6B4FF", // Light blue
+          light: "#A6B4FF",
           foreground: "#FFFFFF",
         },
         secondary: {
@@ -36,37 +36,24 @@ export default {
         },
         accent: {
           DEFAULT: "#F24F00", // Orange accent
-          light: "#FFCFCB", // Light pink/peach
+          light: "#FFCFCB",
         },
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+        soft: {
+          green: "#F2FCE2",
+          yellow: "#FEF7CD",
+          orange: "#FEC6A1",
+          purple: "#E5DEFF",
+          pink: "#FFDEE2",
+          peach: "#FDE1D3",
+          blue: "#D3E4FD",
+          gray: "#F1F0FB",
         },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+        vivid: {
+          purple: "#8B5CF6",
+          pink: "#D946EF",
+          orange: "#F97316",
+          blue: "#0EA5E9",
         },
-        float: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
-        fadeIn: {
-          from: { opacity: "0", transform: "translateY(20px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        float: "float 6s ease-in-out infinite",
-        fadeIn: "fadeIn 0.8s ease-out forwards",
       },
     },
   },
