@@ -2,51 +2,62 @@ import { useState, useEffect } from "react";
 
 export const Timer = () => {
   const [timeLeft, setTimeLeft] = useState({
-    hours: 24,
+    days: 0,
+    hours: 0,
     minutes: 0,
-    seconds: 0,
+    seconds: 0
   });
 
   useEffect(() => {
+    // Устанавливаем конечную дату (например, через 7 дней от текущей даты)
+    const endDate = new Date();
+    endDate.setDate(endDate.getDate() + 7);
+
     const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev.seconds > 0) {
-          return { ...prev, seconds: prev.seconds - 1 };
-        } else if (prev.minutes > 0) {
-          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
-        } else if (prev.hours > 0) {
-          return { hours: prev.hours - 1, minutes: 59, seconds: 59 };
-        }
-        return prev;
-      });
+      const now = new Date().getTime();
+      const distance = endDate.getTime() - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      setTimeLeft({ days, hours, minutes, seconds });
+
+      if (distance < 0) {
+        clearInterval(timer);
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
     }, 1000);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="py-10 bg-gray-50">
-      <div className="container px-4 mx-auto text-center">
-        <div className="max-w-3xl mx-auto">
-          <h3 className="text-2xl font-semibold mb-6">
-            Iscriviti al corso entro
-          </h3>
-          <div className="flex justify-center gap-4 text-4xl font-bold">
-            <div className="bg-primary text-white px-6 py-4 rounded-lg">
-              {String(timeLeft.hours).padStart(2, "0")}
+    <section className="py-12 bg-primary/5">
+      <div className="container px-4 mx-auto">
+        <div className="text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+            Offerta speciale: 50% di sconto sulla prima lezione
+          </h2>
+          <div className="flex justify-center gap-4">
+            <div className="bg-white p-4 rounded-lg shadow-sm min-w-[80px]">
+              <div className="text-3xl font-bold text-primary">{timeLeft.days}</div>
+              <div className="text-sm text-gray-600">Giorni</div>
             </div>
-            <span className="text-primary py-4">:</span>
-            <div className="bg-primary text-white px-6 py-4 rounded-lg">
-              {String(timeLeft.minutes).padStart(2, "0")}
+            <div className="bg-white p-4 rounded-lg shadow-sm min-w-[80px]">
+              <div className="text-3xl font-bold text-primary">{timeLeft.hours}</div>
+              <div className="text-sm text-gray-600">Ore</div>
             </div>
-            <span className="text-primary py-4">:</span>
-            <div className="bg-primary text-white px-6 py-4 rounded-lg">
-              {String(timeLeft.seconds).padStart(2, "0")}
+            <div className="bg-white p-4 rounded-lg shadow-sm min-w-[80px]">
+              <div className="text-3xl font-bold text-primary">{timeLeft.minutes}</div>
+              <div className="text-sm text-gray-600">Minuti</div>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm min-w-[80px]">
+              <div className="text-3xl font-bold text-primary">{timeLeft.seconds}</div>
+              <div className="text-sm text-gray-600">Secondi</div>
             </div>
           </div>
-          <p className="mt-6 text-lg text-gray-600">
-            e ricevi 2 lezioni gratuite aggiuntive su qualsiasi piano tariffario.
-          </p>
         </div>
       </div>
     </section>

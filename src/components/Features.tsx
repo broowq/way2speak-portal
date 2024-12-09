@@ -1,56 +1,63 @@
-import { BookOpen, MessageCircle, Library, Clock, Shield } from "lucide-react";
-
-const features = [
-  {
-    icon: BookOpen,
-    title: "Lezioni su una piattaforma interattiva",
-    description: "dove imparerai vocabolario e grammatica, integrando immediatamente ciò che hai appreso nel linguaggio parlato.",
-  },
-  {
-    icon: MessageCircle,
-    title: "Pratica di conversazione illimitata con l'A-Assistant",
-    description: "Ti aiuterà a superare più rapidamente la barriera linguistica e a consolidare il materiale appreso durante le lezioni.",
-  },
-  {
-    icon: Library,
-    title: "Una biblioteca di risorse",
-    description: "Con film, libri, podcast e serie TV per ogni livello, per creare un ambiente linguistico direttamente a casa tua.",
-  },
-  {
-    icon: Clock,
-    title: "Supporto 24/7",
-    description: "Siamo sempre disponibili per rispondere a qualsiasi tua domanda.",
-  },
-  {
-    icon: Shield,
-    title: "Risultati garantiti",
-    description: "Il programma di studio è stato sviluppato da un insegnante certificato e ha già aiutato più di 50 studenti.",
-  },
-];
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { ContactForm } from "./ContactForm";
 
 export const Features = () => {
   return (
-    <section className="py-20 bg-white">
+    <section id="features" className="py-20 bg-white">
       <div className="container px-4 mx-auto">
-        <div className="text-center mb-16 animate-fadeIn">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Con il programma Way2Speak troverai:
+            Come funziona Way2Speak?
           </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Un metodo innovativo che ti permette di parlare inglese fin dalla prima lezione
+          </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="p-6 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 animate-fadeIn"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <feature.icon className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600">{feature.description}</p>
-            </div>
-          ))}
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300">
+            <h3 className="text-xl font-bold mb-4">
+              1. Lezione di prova gratuita
+            </h3>
+            <p className="text-gray-600">
+              Durante la lezione di prova, valuteremo il tuo livello attuale e creeremo un piano di studio personalizzato.
+            </p>
+          </div>
+
+          <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300">
+            <h3 className="text-xl font-bold mb-4">
+              2. Piano personalizzato
+            </h3>
+            <p className="text-gray-600">
+              Riceverai un programma su misura basato sui tuoi obiettivi, il tuo livello e il tempo che puoi dedicare allo studio.
+            </p>
+          </div>
+
+          <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300">
+            <h3 className="text-xl font-bold mb-4">
+              3. Inizio del percorso
+            </h3>
+            <p className="text-gray-600">
+              Inizierai subito a parlare inglese con i nostri insegnanti madrelingua, focalizzandoti sulla conversazione pratica.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button size="lg" className="bg-primary hover:bg-primary-dark">
+                Prenota la tua lezione gratuita
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-md">
+              <DialogHeader>
+                <DialogTitle>Prenota la tua lezione di prova gratuita</DialogTitle>
+              </DialogHeader>
+              <ContactForm />
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </section>
