@@ -14,6 +14,13 @@ export const Hero = () => {
     <section className="min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-primary/5 to-transparent">
       <div className="container px-4 mx-auto">
         <div className="text-center space-y-8 animate-fadeIn">
+          <div className="flex justify-center mb-8">
+            <img 
+              src="/lovable-uploads/f59c385d-56a2-4542-bce3-d182766cebf8.png" 
+              alt="Way2Speak" 
+              className="h-16 md:h-20"
+            />
+          </div>
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
             Parla inglese con sicurezza e inizia a capire i madrelingua in{" "}
             <span className="text-primary">12 settimane</span>
@@ -39,6 +46,7 @@ export const Hero = () => {
               size="lg" 
               variant="outline" 
               onClick={() => handleScroll('features')}
+              className="border-primary text-primary hover:bg-primary/10"
             >
               Scopri di più
             </Button>

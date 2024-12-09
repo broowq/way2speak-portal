@@ -25,14 +25,18 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#9b87f5",
-          dark: "#7E69AB",
-          light: "#D6BCFA",
+          DEFAULT: "#3843D0", // Main blue
+          dark: "#2832A0",
+          light: "#A6B4FF", // Light blue
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#F2FCE2",
-          foreground: "#1A1F2C",
+          DEFAULT: "#FFEDD2", // Light beige
+          foreground: "#111111",
+        },
+        accent: {
+          DEFAULT: "#F24F00", // Orange accent
+          light: "#FFCFCB", // Light pink/peach
         },
       },
       borderRadius: {
