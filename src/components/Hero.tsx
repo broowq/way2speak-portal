@@ -18,7 +18,7 @@ export const Hero = () => {
             <img 
               src="/lovable-uploads/f59c385d-56a2-4542-bce3-d182766cebf8.png" 
               alt="Way2Speak" 
-              className="h-16 md:h-20"
+              className="h-24 md:h-32"
             />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
