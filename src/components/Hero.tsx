@@ -16,7 +16,7 @@ export const Hero = () => {
         <div className="text-center space-y-8 animate-fadeIn">
           <div className="flex justify-center mb-8">
             <img 
-              src="/lovable-uploads/f59c385d-56a2-4542-bce3-d182766cebf8.png" 
+              src="/lovable-uploads/1550cb93-8320-4bde-a2b4-e9504975b0b1.png" 
               alt="Way2Speak" 
               className="w-full max-w-2xl h-auto"
             />
