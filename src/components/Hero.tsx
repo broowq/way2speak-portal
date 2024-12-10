@@ -45,20 +45,6 @@ export const Hero = () => {
               >
                 Scopri di più
               </Button>
-              <a 
-                href="https://www.instagram.com/ally.gera/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-pink-500 text-pink-500 hover:bg-pink-50"
-                >
-                  <Instagram className="mr-2 h-5 w-5" />
-                  Instagram
-                </Button>
-              </a>
             </div>
           </div>
           <div className="relative">
@@ -76,6 +62,21 @@ export const Hero = () => {
                 className="rounded-2xl shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent rounded-2xl" />
+              <a 
+                href="https://www.instagram.com/ally.gera/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="absolute bottom-4 right-4"
+              >
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="glass-effect border-pink-500 text-pink-500 hover:bg-pink-50"
+                >
+                  <Instagram className="mr-2 h-5 w-5" />
+                  Instagram
+                </Button>
+              </a>
             </div>
           </div>
         </div>
