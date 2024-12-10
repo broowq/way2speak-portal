@@ -50,8 +50,8 @@ export const Hero = () => {
           <div className="relative">
             <div className="absolute -right-4 -bottom-4 w-full h-full">
               <img 
-                src="/lovable-uploads/f59c385d-56a2-4542-bce3-d182766cebf8.png" 
-                alt="Books background" 
+                src="/lovable-uploads/e9f1d8f7-2027-4f13-83a5-2154aef74ef3.png" 
+                alt="British flag background" 
                 className="w-full h-full object-cover rounded-2xl opacity-20"
               />
             </div>
