@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ContactForm } from "./ContactForm";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Instagram } from "lucide-react";
 
 export const Hero = () => {
   const handleScroll = (elementId: string) => {
@@ -11,7 +12,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-primary/5 to-transparent">
+    <section className="min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-primary/5 via-white to-secondary/10">
       <div className="container px-4 mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-left space-y-8 animate-fadeIn">
@@ -22,7 +23,7 @@ export const Hero = () => {
             <p className="text-xl text-gray-600">
               Valutazione media di oltre 50 studenti attivi della scuola: 4,8
             </p>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
               <Dialog>
                 <DialogTrigger asChild>
                   <Button size="lg" className="bg-primary hover:bg-primary-dark">
@@ -44,15 +45,38 @@ export const Hero = () => {
               >
                 Scopri di più
               </Button>
+              <a 
+                href="https://www.instagram.com/ally.gera/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-pink-500 text-pink-500 hover:bg-pink-50"
+                >
+                  <Instagram className="mr-2 h-5 w-5" />
+                  Instagram
+                </Button>
+              </a>
             </div>
           </div>
           <div className="relative">
-            <img 
-              src="/lovable-uploads/b21e3ff2-795c-4c3f-b7e5-9fdbb2f33a98.png"
-              alt="Way2Speak Teacher"
-              className="rounded-2xl shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-300"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent rounded-2xl" />
+            <div className="absolute -right-4 -bottom-4 w-full h-full">
+              <img 
+                src="/lovable-uploads/f59c385d-56a2-4542-bce3-d182766cebf8.png" 
+                alt="Books background" 
+                className="w-full h-full object-cover rounded-2xl opacity-20"
+              />
+            </div>
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/b21e3ff2-795c-4c3f-b7e5-9fdbb2f33a98.png"
+                alt="Way2Speak Teacher"
+                className="rounded-2xl shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent rounded-2xl" />
+            </div>
           </div>
         </div>
       </div>
