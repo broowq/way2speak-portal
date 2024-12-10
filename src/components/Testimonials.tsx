@@ -5,22 +5,19 @@ const testimonials = [
     name: "Francesca",
     role: "Studente A2 → B1",
     content: "Ciao Ally! lo tutto bene invece tu? La prima volta che mi sei uscita su tik tok mi sei subito piaciuta. Ho iniziato a vedere molti tuoi video, ti ho iniziata a seguire su instagram per sapere di più perché in quel tempo stavo cercando qualcuno che mi insegnasse l'inglese. Ho deciso subito di contattarti e sono molto fiera di averlo fatto. Mi sento davvero molto a mio agio ad imparare la lingua con voi, le lezioni sono divertenti, pratichiamo molto lo speaking (cosa che a scuola non facciamo). Mi è bastata la consulenza per capire che il mio percorso lo avrei voluto continuare con voi. Mi sento davvero migliorata da quando frequento questo corso, se mi capita riesco a parlare più a mio agio l'inglese e se mi esce qualche video lo ascolto tutto e cerco di capire quello di cui parla, cosa che non ho mai fatto.",
-    rating: 5,
-    image: "/lovable-uploads/b21e3ff2-795c-4c3f-b7e5-9fdbb2f33a98.png"
+    rating: 5
   },
   {
     name: "Maria",
     role: "Studente B1 → B2",
     content: "Ho scelto di studiare con Way2speak perché trovo molto interessante e innovativo il metodo di insegnamento e apprendimento che viene proposto. La piattaforma è molto chiara e intuitiva e mi aiuta a memorizzare i termini velocemente. Durante ogni lezione c'è la parte di conversazione che per me è sempre stato un grande ostacolo e apprezzo molto l'importanza che le viene data. La grammatica viene spiegata in modo chiaro e semplice applicandola subito con degli esercizi. Inoltre Ally è molto paziente e preparata per qualsiasi esigenza uno studente abbia. È passato quasi un anno e ho riscontrato grandi miglioramenti",
-    rating: 5,
-    image: "/lovable-uploads/1add5f64-009c-415d-8dd5-9433cd27e7a0.png"
+    rating: 5
   },
   {
     name: "Sofia",
     role: "Studente A1 → A2",
     content: "Ciao Ally! lo bene, tu? Mi trovo benissimo con Martina, sono davvero tanto tanto contenta di imparare con voi. Sono riuscita a migliorare la pronuncia e ho imparato nuove parole che prima non conoscevo. E sarò molto felice di continuare il mio percorso con lei",
-    rating: 5,
-    image: "/lovable-uploads/b50efb64-1ec1-4fca-8d7b-fc772a7d7bd5.png"
+    rating: 5
   },
 ];
 
@@ -59,14 +56,6 @@ export const Testimonials = () => {
                     style={{ transitionDelay: `${i * 0.1}s` }}
                   />
                 ))}
-              </div>
-              
-              <div className="mb-6">
-                <img 
-                  src={testimonial.image} 
-                  alt={`${testimonial.name}'s testimonial`}
-                  className="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-white shadow-md"
-                />
               </div>
               
               <p className="text-gray-700 mb-8 text-lg leading-relaxed italic">
