@@ -52,7 +52,7 @@ export const Hero = () => {
               <img 
                 src="/lovable-uploads/e9f1d8f7-2027-4f13-83a5-2154aef74ef3.png" 
                 alt="British flag background" 
-                className="w-full h-full object-cover rounded-2xl opacity-20"
+                className="w-full h-full object-cover rounded-2xl opacity-40"
               />
             </div>
             <div className="relative">
