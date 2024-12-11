@@ -12,8 +12,33 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-primary/5 via-white to-secondary/10">
-      <div className="container px-4 mx-auto">
+    <section className="min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-primary/5 via-white to-secondary/10 relative overflow-hidden">
+      {/* Background decorative images */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-0 right-0 w-48 h-48 md:w-64 md:h-64 opacity-20">
+          <img 
+            src="/lovable-uploads/33987e34-f333-45c8-b8e9-c96c99dbdc06.png" 
+            alt="British flag" 
+            className="w-full h-full object-contain"
+          />
+        </div>
+        <div className="absolute bottom-0 left-0 w-32 h-48 md:w-48 md:h-64 opacity-20">
+          <img 
+            src="/lovable-uploads/1d9f7f1d-b05b-4d4f-b0c7-17c3cce0a4a6.png" 
+            alt="Red telephone box" 
+            className="w-full h-full object-contain"
+          />
+        </div>
+        <div className="absolute top-1/4 left-1/4 w-32 h-48 md:w-48 md:h-64 opacity-20">
+          <img 
+            src="/lovable-uploads/2f0d56d4-7732-4132-951c-19901718b909.png" 
+            alt="Big Ben" 
+            className="w-full h-full object-contain"
+          />
+        </div>
+      </div>
+
+      <div className="container px-4 mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-left space-y-8 animate-fadeIn">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
@@ -48,13 +73,6 @@ export const Hero = () => {
             </div>
           </div>
           <div className="relative">
-            <div className="absolute -right-4 -bottom-4 w-full h-full">
-              <img 
-                src="/lovable-uploads/e9f1d8f7-2027-4f13-83a5-2154aef74ef3.png" 
-                alt="British flag background" 
-                className="w-full h-full object-cover rounded-2xl opacity-40"
-              />
-            </div>
             <div className="relative">
               <img 
                 src="/lovable-uploads/b21e3ff2-795c-4c3f-b7e5-9fdbb2f33a98.png"
