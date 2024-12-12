@@ -13,23 +13,6 @@ export const Hero = () => {
 
   return (
     <section className="min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-soft-blue via-white to-soft-purple relative overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 left-0 w-1/3 h-full opacity-20">
-          <img 
-            src="/lovable-uploads/e626c80d-496c-446d-a06b-b9adbf9fa80f.png" 
-            alt="English Learning Class"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="absolute top-0 right-0 w-1/3 h-full opacity-20">
-          <img 
-            src="/lovable-uploads/f59c385d-56a2-4542-bce3-d182766cebf8.png" 
-            alt="Online English Teaching"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-
       <div className="container px-4 mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-left space-y-8 animate-fadeIn">
