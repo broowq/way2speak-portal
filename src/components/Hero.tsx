@@ -62,7 +62,7 @@ export const Hero = () => {
               href="https://www.instagram.com/ally.gera/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="absolute bottom-4 right-4"
+              className="absolute top-1/3 -left-4 md:-left-8"
             >
               <Button 
                 size="lg" 
