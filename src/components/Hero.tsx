@@ -13,6 +13,11 @@ export const Hero = () => {
 
   return (
     <section className="min-h-[80vh] flex items-center justify-center relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-white to-secondary/10" />
+      
+      <div className="absolute top-10 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 right-10 w-64 h-64 bg-secondary/5 rounded-full blur-3xl" />
+      
       <div className="container px-4 mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-left space-y-8 animate-fadeIn">
@@ -62,7 +67,7 @@ export const Hero = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="bg-white/80 backdrop-blur-sm border-primary text-primary hover:bg-primary/10"
+                className="glass-effect border-pink-500 text-pink-500 hover:bg-pink-50 shadow-lg"
               >
                 <Instagram className="mr-2 h-5 w-5" />
                 Instagram
