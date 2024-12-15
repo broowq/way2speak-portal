@@ -12,7 +12,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-soft-blue via-white to-soft-purple relative overflow-hidden">
+    <section className="min-h-[80vh] flex items-center justify-center relative overflow-hidden">
       <div className="container px-4 mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-left space-y-8 animate-fadeIn">
