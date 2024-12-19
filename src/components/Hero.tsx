@@ -15,9 +15,6 @@ export const Hero = () => {
     <section className="min-h-[80vh] flex items-center justify-center relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-white to-secondary/10" />
       
-      <div className="absolute top-10 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-10 right-10 w-64 h-64 bg-secondary/5 rounded-full blur-3xl" />
-      
       <div className="container px-4 mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-left space-y-8 animate-fadeIn">
@@ -62,7 +59,7 @@ export const Hero = () => {
               href="https://www.instagram.com/ally.gera/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="absolute top-1/3 -right-4 md:-right-8"
+              className="absolute top-1/4 -right-4 md:-right-8"
             >
               <Button 
                 size="lg" 
