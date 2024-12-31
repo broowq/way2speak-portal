@@ -19,18 +19,17 @@ export const ContactForm = () => {
     setIsLoading(true);
     
     try {
-      // Отправка данных через EmailJS
       await emailjs.send(
-        'service_YOUR_SERVICE_ID', // Замените на ваш Service ID
-        'template_YOUR_TEMPLATE_ID', // Замените на ваш Template ID
+        'service_YOUR_SERVICE_ID',
+        'template_YOUR_TEMPLATE_ID',
         {
           from_name: formData.name,
           from_email: formData.email,
           phone: formData.phone,
           level: formData.level,
-          to_email: 'YOUR_EMAIL@example.com', // Замените на ваш email
+          to_email: 'YOUR_EMAIL@example.com',
         },
-        'YOUR_PUBLIC_KEY' // Замените на ваш Public Key
+        'YOUR_PUBLIC_KEY'
       );
       
       toast({
