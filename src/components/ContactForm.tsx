@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 export const ContactForm = () => {
   const { toast } = useToast();
@@ -18,9 +19,19 @@ export const ContactForm = () => {
     setIsLoading(true);
     
     try {
-      // Имитация отправки запроса на сервер
-      console.log("Отправка данных на сервер:", formData);
-      await new Promise(resolve => setTimeout(resolve, 1000)); // Имитация задержки сети
+      // Отправка данных через EmailJS
+      await emailjs.send(
+        'service_YOUR_SERVICE_ID', // Замените на ваш Service ID
+        'template_YOUR_TEMPLATE_ID', // Замените на ваш Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          level: formData.level,
+          to_email: 'YOUR_EMAIL@example.com', // Замените на ваш email
+        },
+        'YOUR_PUBLIC_KEY' // Замените на ваш Public Key
+      );
       
       toast({
         title: "Richiesta inviata con successo!",
@@ -29,6 +40,7 @@ export const ContactForm = () => {
       
       setFormData({ name: "", email: "", phone: "", level: "beginner" });
     } catch (error) {
+      console.error('Error sending email:', error);
       toast({
         title: "Errore",
         description: "Si è verificato un errore durante l'invio della richiesta. Riprova più tardi.",
